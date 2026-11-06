@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Grade 7 Science interactive lesson: Balanced and Unbalanced Forces.">
+<title>Forces in Action! | Grade 7 Science</title>
+<style>
+:root{--navy:#073b70;--blue:#0879c9;--teal:#078f85;--green:#119b62;--orange:#f47b16;--purple:#6950a6;--pink:#d92b67;--ink:#142c49;--paper:#f4f9ff;--line:#d4e3f2}
+*{box-sizing:border-box}body{margin:0;background:#edf4fb;color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{background:linear-gradient(120deg,#06386d,#0878bd);color:white;padding:28px 18px 24px;text-align:center}
+header .tag{display:inline-block;background:#ffe36a;color:#15385d;padding:5px 13px;border-radius:20px;font-weight:800}
+header h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:12px 0 5px}
+header p{margin:0 auto;max-width:800px;font-size:1.05rem}
+main{max-width:1120px;margin:auto;padding:18px}
+.panel,.card{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 4px 15px #153c6410}
+h2{margin:0 0 12px;color:var(--navy);font-size:1.5rem}
+h3{margin:8px 0;color:#075b87}
+.small{font-size:.9rem;color:#4c627b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.identity{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+label{display:block;font-weight:700;margin:5px 0}
+input,select,textarea{width:100%;padding:11px;border:1px solid #9eb7ce;border-radius:9px;font:inherit;background:white;color:var(--ink)}
+button{border:0;border-radius:10px;padding:11px 16px;font:inherit;font-weight:750;cursor:pointer;background:var(--blue);color:white;margin:5px 5px 5px 0}
+button.secondary{background:#e8f2fc;color:#07558c;border:1px solid #b7d2e9}
+button.green{background:var(--green)}button.orange{background:var(--orange)}
+button:focus,input:focus,select:focus,textarea:focus{outline:3px solid #ffda68;outline-offset:2px}
+.pill{display:inline-block;padding:3px 10px;border-radius:20px;background:#e7f4ff;color:#07558c;font-size:.85rem;font-weight:800}
+.callout{padding:12px 15px;border-left:5px solid var(--blue);background:#eef7ff;border-radius:9px;margin:12px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.force-balanced{border-top:5px solid var(--green)}.force-unbalanced{border-top:5px solid var(--orange)}
+.example{background:#f6faff;border:1px solid var(--line);border-radius:12px;padding:13px}.example img.illustration{display:block;width:100%;max-height:145px;object-fit:contain;background:#fff;border-radius:9px;margin:0 auto 9px;border:1px solid #e1ebf5}.example img.illustration.wide{max-height:175px}
+.activity{border-left:5px solid var(--purple)}
+.question{padding:12px 0;border-bottom:1px solid var(--line)}
+.question:last-child{border:0}.question p{font-weight:700;margin:0 0 7px}
+.options label{font-weight:500;display:flex;gap:8px;align-items:flex-start;margin:7px 0}
+.options input{width:auto;margin-top:5px}
+.feedback{font-weight:700;margin-top:6px}.correct{color:#087c4c}.incorrect{color:#b74718}
+.progress{height:12px;background:#e5edf5;border-radius:20px;overflow:hidden}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#078d82,#16a86b);transition:width .25s}
+footer{text-align:center;padding:28px;color:#52677c}
+details{background:#f7faff;border:1px solid var(--line);border-radius:10px;padding:12px;margin:10px 0}
+summary{font-weight:800;cursor:pointer;color:var(--navy)}
+#diagram{width:100%;max-width:650px;height:auto;background:#f8fbff;border:1px solid var(--line);border-radius:12px}
+.infographic{width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+.badge{font-size:.8rem;font-weight:800;color:#fff;background:var(--purple);border-radius:20px;padding:4px 10px}
+@media(max-width:650px){main{padding:10px}.panel,.card{padding:15px}.two{grid-template-columns:1fr}}
+@media print{body{background:white}.no-print,button{display:none!important}.panel,.card{box-shadow:none;break-inside:avoid}header{background:#fff;color:#111;border-bottom:2px solid #333}}
+</style>
+</head>
+<body>
+<header>
+ <span class="tag">GRADE 7 • SCIENCE</span>
+ <h1>Forces in Action!</h1>
+ <p>Balanced and Unbalanced Forces — Explore pushes and pulls, investigate motion, and think like a scientist.</p>
+</header>
+<main>
+<section class="panel" id="learner">
+ <h2>Before you begin</h2>
+ <p>Enter your details first. Your name and learning evidence will appear in your downloadable activity report.</p>
+ <div class="identity">
+  <div><label for="learnerName">Learner's full name *</label><input id="learnerName" placeholder="Enter your full name" autocomplete="name" required></div>
+  <div><label for="section">Grade & section</label><input id="section" placeholder="e.g., Grade 7 – ICT A"></div>
+  <div><label for="date">Date</label><input id="date" type="date"></div>
+ </div>
+ <p class="small">Suggested learning time: 60 minutes • Work independently unless your teacher gives other instructions.</p>
+</section>
+
+<section class="panel">
+ <h2><span class="pill">I</span> Intentions — What will I learn?</h2>
+ <p>At the end of this lesson, you should be able to:</p>
+ <ul>
+  <li>Describe a force as a push or pull and identify the newton (N) as its unit.</li>
+  <li>Distinguish balanced forces from unbalanced forces using everyday situations.</li>
+  <li>Interpret and construct simple free-body diagrams using arrows to show direction and relative size.</li>
+  <li>Calculate net force in one dimension and explain how unbalanced forces affect speed or direction.</li>
+ </ul>
+ <div class="callout"><b>Success looks like:</b> You can explain whether forces are balanced, show the net force, and predict what happens to an object's motion.</div>
+ <p class="small"><b>Prior learning:</b> Scientists and engineers analyze forces to predict their effects on movement.</p>
+</section>
+
+<section class="panel">
+ <h2><span class="pill">L</span> Learning Experience — Explore and investigate</h2>
+ <h3>1. Engage: What is a force?</h3>
+ <p>A <b>force</b> is a push or pull that acts between objects. A force can start or stop motion, speed an object up, slow it down, or change its direction. Forces are measured using a force meter (spring scale) in <b>newtons (N)</b>.</p>
+ <div class="grid">
+  <div class="example"><img class="illustration" src="assets/examples/push.jpg" alt="Learner pushing a large box"><b>Push</b><p>When you push a classroom door, you apply a force to the door.</p></div>
+  <div class="example"><img class="illustration" src="assets/examples/pull.jpg" alt="Learner pulling a small wagon"><b>Pull</b><p>When you pull a drawer open, you apply a force to the drawer.</p></div>
+  <div class="example"><img class="illustration" src="assets/examples/push-pull.jpg" alt="Examples of applied pushing and pulling forces"><b>Contact force</b><p>Your hand pushes a book across a table; the objects touch.</p></div>
+  <div class="example"><img class="illustration" src="assets/examples/falling-fruit.jpg" alt="Fruit falling because of gravity"><b>Non-contact force</b><p>Earth's gravity pulls a falling fruit downward without touching it.</p></div>
+ </div>
+ <h3>2. Explain: Balanced vs. unbalanced forces</h3>
+ <div class="two">
+  <div class="example force-balanced"><img class="illustration" src="assets/examples/balanced-unbalanced.jpg" alt="Comparison of balanced and unbalanced forces"><h3>Balanced forces</h3><ul><li>Equal in size and opposite in direction (for forces along the same line).</li><li>Net force = <b>0 N</b>.</li><li>No change in motion: an object remains at rest or continues at constant velocity.</li></ul><p><b>Example:</b> A learner standing still: upward normal force balances downward weight.</p></div>
+  <div class="example force-unbalanced"><img class="illustration" src="assets/examples/balanced-unbalanced.jpg" alt="Comparison of balanced and unbalanced forces"><h3>Unbalanced forces</h3><ul><li>Forces do not cancel; net force is not zero.</li><li>Net force ≠ <b>0 N</b>.</li><li>Motion changes: speed, direction, or both can change.</li></ul><p><b>Example:</b> A fruit falls and speeds up because gravity is greater than air resistance.</p></div>
+ </div>
+ <div class="callout"><b>Important science idea:</b> Balanced forces do not always mean an object is not moving. A car moving straight at constant velocity can have balanced forces.</div>
+ <h3>3. More everyday examples</h3>
+ <div class="grid">
+  <div class="example"><img class="illustration" src="assets/examples/inclined-plane.jpg" alt="Box resting on a sloped surface with forces shown"><b>Book resting on a desk</b><p>Desk pushes upward; gravity pulls downward with equal force. Net force is zero.</p><span class="pill">Balanced</span></div>
+  <div class="example"><img class="illustration" src="assets/examples/push-pull.jpg" alt="People applying opposite pushes and pulls"><b>Tug-of-war tied</b><p>Two teams pull with equal strength in opposite directions. The rope does not accelerate.</p><span class="pill">Balanced*</span></div>
+  <div class="example"><img class="illustration" src="assets/examples/pull.jpg" alt="A person pulling a wheeled wagon"><b>Shopping cart pushed forward</b><p>The forward push is greater than opposing friction. The cart accelerates forward.</p><span class="pill">Unbalanced</span></div>
+  <div class="example"><img class="illustration" src="assets/examples/braking-bicycle.jpg" alt="Cyclist braking with friction opposing motion"><b>Bicycle braking</b><p>Braking force acts opposite the bicycle's motion, making it slow down.</p><span class="pill">Unbalanced</span></div>
+  <div class="example"><img class="illustration" src="assets/examples/stopping-ball.jpg" alt="Ball moving while a force acts on it"><b>Ball changing direction</b><p>A sideways kick applies a net force that changes the ball's direction.</p><span class="pill">Unbalanced</span></div>
+  <div class="example"><img class="illustration" src="assets/examples/moving-car.jpg" alt="Car with balanced forward driving force and backward friction"><b>Car at constant velocity</b><p>Driving force forward balances friction and air resistance backward.</p><span class="pill">Balanced</span></div>
+ </div>
+ <p class="small">*In a real tug-of-war, classify the forces on the rope for the stated situation; ground friction and other forces can also matter.</p>
+
+ <h3>4. Investigate: Free-body diagrams</h3>
+ <p>A <b>free-body diagram (FBD)</b> represents the forces acting on one object. Each arrow points in the force's direction. Longer arrows represent greater forces. Draw only the forces acting on the selected object.</p>
+ <div class="grid">
+  <div class="example"><img class="illustration" src="assets/examples/stationary-learner.jpg" alt="Learner standing still with balanced forces"><b>Standing learner</b><p>Normal force ↑ 600 N; weight ↓ 600 N. Net force = 0 N.</p></div>
+  <div class="example"><img class="illustration" src="assets/examples/falling-fruit.jpg" alt="Falling fruit with gravity and air resistance"><b>Falling fruit</b><p>Gravity ↓ 8 N; air resistance ↑ 3 N. Net force = 5 N downward.</p></div>
+  <div class="example"><img class="illustration" src="assets/examples/moving-car.jpg" alt="Car with horizontal forces"><b>Accelerating car</b><p>Driving force forward is greater than friction backward. Net force is forward.</p></div>
+ </div>
+ <h3>Try the force-arrow simulator</h3>
+ <p>Enter two opposite forces. The diagram and net force update automatically.</p>
+ <div class="two">
+  <div><label for="rightForce">Force to the right (N)</label><input type="number" min="0" max="1000" id="rightForce" value="15"></div>
+  <div><label for="leftForce">Force to the left (N)</label><input type="number" min="0" max="1000" id="leftForce" value="9"></div>
+ </div>
+ <svg id="diagram" viewBox="0 0 600 190" role="img" aria-label="Free-body diagram showing opposite horizontal forces">
+  <defs><marker id="arrR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#0879c9"/></marker><marker id="arrL" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#f47b16"/></marker></defs>
+  <rect x="260" y="70" width="80" height="50" rx="8" fill="#d9e8f7" stroke="#174c7b" stroke-width="2"/>
+  <text x="300" y="100" text-anchor="middle" font-size="16" fill="#142c49">OBJECT</text>
+  <line id="rightArrow" x1="340" y1="95" x2="450" y2="95" stroke="#0879c9" stroke-width="7" marker-end="url(#arrR)"/>
+  <line id="leftArrow" x1="260" y1="95" x2="194" y2="95" stroke="#f47b16" stroke-width="7" marker-end="url(#arrL)"/>
+  <text id="rightLabel" x="410" y="75" text-anchor="middle" fill="#075b9b" font-size="16">15 N →</text>
+  <text id="leftLabel" x="205" y="75" text-anchor="middle" fill="#b95a0c" font-size="16">← 9 N</text>
+  <text x="300" y="155" text-anchor="middle" font-size="14" fill="#52677c">Arrows show direction and relative magnitude</text>
+ </svg>
+ <div class="callout" aria-live="polite"><b id="netResult">Net force = 6 N to the right. Forces are unbalanced.</b><br><span id="motionResult">If the object is free to move, it may accelerate to the right.</span></div>
+
+ <h3>More illustrated situations to compare</h3>
+ <div class="grid">
+  <div class="example"><img class="illustration" src="assets/examples/rocket-launch.jpg" alt="Rocket launching upward with thrust and weight arrows"><b>Rocket launch</b><p>Thrust upward is greater than weight, so the rocket accelerates upward.</p><span class="pill">Unbalanced</span></div>
+  <div class="example"><img class="illustration" src="assets/examples/sailboat-wind.jpg" alt="Wind pushing a sailboat across water"><b>Wind and a sailboat</b><p>Wind exerts a force on the sail and can make the boat move.</p><span class="pill">Unbalanced</span></div>
+  <div class="example"><img class="illustration" src="assets/examples/stopping-ball.jpg" alt="A moving ball experiencing a force"><b>Stopping ball</b><p>A force opposite the ball's motion can slow it down.</p><span class="pill">Unbalanced</span></div>
+ </div>
+ <h3>5. Guided practice: Calculate net force</h3>
+ <p>For forces acting in opposite directions, subtract the smaller force from the larger force. The net force points in the direction of the larger force.</p>
+ <div class="example"><img class="illustration wide" src="assets/examples/inclined-plane.jpg" alt="Object on a slope with force arrows"><b>Worked example:</b> A learner pushes a box right with 15 N. Friction acts left with 9 N.<br>
+ \(F_{net}=15-9=6\ N\), to the right. The forces are unbalanced.</div>
+</section>
+
+<section class="panel activity">
+ <h2>Learning Activity 1 — Force detectives <span class="badge">8 minutes</span></h2>
+ <p>Classify each situation. Select balanced or unbalanced, then check your answers.</p>
+ <div id="classify"></div>
+ <button class="green" onclick="checkClassify()">Check activity 1</button><span id="classifyScore" class="feedback" aria-live="polite"></span>
+</section>
+
+<section class="panel activity">
+ <h2>Learning Activity 2 — Predict the motion <span class="badge">7 minutes</span></h2>
+ <p>Choose the most likely effect of the net force in each situation.</p>
+ <div id="predict"></div>
+ <button class="green" onclick="checkPredict()">Check activity 2</button><span id="predictScore" class="feedback" aria-live="polite"></span>
+</section>
+
+<section class="panel activity">
+ <h2>Learning Activity 3 — Net force challenge <span class="badge">8 minutes</span></h2>
+ <p>Calculate the net force and choose its direction. Enter the magnitude as a positive number.</p>
+ <div class="question"><p>1. A box is pushed right with 20 N and friction acts left with 12 N. What is the net force?</p>
+  <input id="calc1" type="number" placeholder="Net force in N">
+  <select id="dir1"><option value="">Choose direction</option><option>Right</option><option>Left</option><option>Zero / balanced</option></select>
+ </div>
+ <div class="question"><p>2. A cart is pulled left with 18 N and friction acts right with 18 N. What is the net force?</p>
+  <input id="calc2" type="number" placeholder="Net force in N">
+  <select id="dir2"><option value="">Choose direction</option><option>Right</option><option>Left</option><option>Zero / balanced</option></select>
+ </div>
+ <div class="question"><p>3. Gravity pulls a fruit downward with 10 N while air resistance acts upward with 4 N. What is the net force?</p>
+  <input id="calc3" type="number" placeholder="Net force in N">
+  <select id="dir3"><option value="">Choose direction</option><option>Up</option><option>Down</option><option>Zero / balanced</option></select>
+ </div>
+ <button class="green" onclick="checkCalculations()">Check activity 3</button><span id="calcScore" class="feedback" aria-live="polite"></span>
+</section>
+
+<section class="panel activity">
+ <h2>Learning Activity 4 — Build a free-body diagram <span class="badge">7 minutes</span></h2>
+ <p>Scenario: An object experiences a 6 N force to the right and a 2 N force to the left. Use the simulator above or describe the arrows below.</p>
+ <label for="fbdExplain">Describe both arrows and state the net force and direction.</label>
+ <textarea id="fbdExplain" rows="3" placeholder="Example: Draw a longer arrow to the right labelled..."></textarea>
+ <p class="small">Self-check: Your response should include a longer right arrow (6 N), a shorter left arrow (2 N), and a net force of 4 N to the right.</p>
+</section>
+
+<section class="panel">
+ <h2><span class="pill">A</span> Assessing Learning — Quick check</h2>
+ <p>Answer all 10 questions. Your score will be calculated automatically. Aim for at least 8 out of 10.</p>
+ <div class="progress" aria-label="Quiz progress"><div id="progressBar"></div></div>
+ <p class="small" id="progressText">0 of 10 answered</p>
+ <div id="quiz"></div>
+ <button class="green" onclick="gradeQuiz()">Submit quiz and see score</button>
+ <span id="quizScore" class="feedback" aria-live="polite"></span>
+ <div id="quizFeedback"></div>
+</section>
+
+<section class="panel">
+ <h2>Reflection — Think like a scientist</h2>
+ <label for="reflection">What idea about forces became clearer to you? What is one question you still have?</label>
+ <textarea id="reflection" rows="4" placeholder="Write your reflection here..."></textarea>
+</section>
+
+<section class="panel">
+ <h2><span class="pill">W</span> Ways Forward — What happens next?</h2>
+ <div class="grid">
+  <div class="example"><h3>If you scored 0–5</h3><p><b>Remediation:</b> Review the force definitions and balanced/unbalanced examples. Repeat Activity 1 with a partner or teacher. Practice identifying equal and opposite arrows.</p></div>
+  <div class="example"><h3>If you scored 6–7</h3><p><b>Practice:</b> Revisit the worked examples. Solve additional net-force problems and explain why a moving object can still have balanced forces.</p></div>
+  <div class="example"><h3>If you scored 8–10</h3><p><b>Enrichment:</b> Observe a sport or vehicle movement. Identify the forces and sketch a free-body diagram showing the likely net force.</p></div>
+ </div>
+ <div class="callout"><b>Next step:</b> Discuss your results with your teacher. Your teacher may provide a short reteaching activity, more practice, or an enrichment task based on your evidence of learning.</div>
+</section>
+
+<section class="panel">
+ <h2>Lesson reference infographic</h2>
+ <p class="small">Use this visual summary to review the key ideas from the lesson.</p>
+ <img class="infographic" src="assets/forces-infographic.jpg" alt="Grade 7 infographic explaining balanced and unbalanced forces, examples, free-body diagrams and changes in motion">
+</section>
+
+<section class="panel no-print">
+ <h2>Your learner output</h2>
+ <p>Download your activity record after entering your name and completing the tasks. The file includes your name, section, date, activity responses, quiz score, and reflection. It is saved on your device; it is not automatically sent to your teacher.</p>
+ <button class="green" onclick="downloadReport()">Download my learning output (.json)</button>
+ <button class="secondary" onclick="downloadText()">Download printable report (.txt)</button>
+ <button class="secondary" onclick="window.print()">Print / Save as PDF</button>
+ <p id="downloadMessage" class="small" aria-live="polite"></p>
+</section>
+
+<section class="panel no-print">
+ <details>
+  <summary>Teacher view — ILAW lesson-planning notes and answer key</summary>
+  <h3>Intentions</h3>
+  <p>Learning objectives are adapted from the supplied Grade 7 Science worksheet. It targets identifying force and its unit, distinguishing balanced and unbalanced forces, interpreting free-body diagrams, and explaining motion changes. The source file does not provide a curriculum competency code or exact curriculum-guide citation; verify and insert the applicable competency from your school's current Grade 7 Science Budget of Work or curriculum guide.</p>
+  <h3>Learning Experience (suggested 60 minutes)</h3>
+  <ol><li>Engage and activate prior knowledge: force as push or pull (5 min).</li><li>Explain balanced/unbalanced forces and everyday examples (10 min).</li><li>Model free-body diagrams and use the force-arrow simulator (10 min).</li><li>Guided learner activities 1–4 (30 min).</li><li>Reflection and feedback (5 min).</li></ol>
+  <h3>Assessing Learning</h3>
+  <p>Use activity checks, the 10-item quiz, learner explanations, and reflection as formative evidence. Review both correctness and reasoning.</p>
+  <h3>Ways Forward</h3>
+  <p>Use the learner's results to decide remediation, additional practice, or enrichment. The suggested thresholds in this resource are classroom guidance and may be adjusted to learner context.</p>
+  <h3>Answer key</h3>
+  <p><b>Activity 1:</b> 1 balanced; 2 unbalanced; 3 balanced; 4 unbalanced; 5 unbalanced; 6 balanced.</p>
+  <p><b>Activity 2:</b> 1 speeds up; 2 changes direction; 3 slows down; 4 speeds up downward; 5 continues at constant velocity; 6 accelerates left.</p>
+  <p><b>Activity 3:</b> 8 N right; 0 N balanced; 6 N down.</p>
+  <p><b>Quiz:</b> 1 B, 2 C, 3 A, 4 B, 5 C, 6 B, 7 A, 8 C, 9 B, 10 A.</p>
+  <p><b>Source alignment:</b> The supplied worksheet's worked examples and key ideas are retained. The interactive practice and additional everyday examples are supplementary elaborations for this lesson.</p>
+ </details>
+</section>
+</main>
+<footer>Forces in Action! • Grade 7 Science • Teacher may adapt activities to learner readiness and classroom context.</footer>
+<script>
+const classifyItems=[
+ ["A learner stands still on the floor.","Balanced"],
+ ["A fruit falls and speeds up downward.","Unbalanced"],
+ ["A car travels straight at constant velocity.","Balanced"],
+ ["A car accelerates from a stop.","Unbalanced"],
+ ["A box rests on an inclined plane; friction balances the downhill component of gravity.","Balanced"],
+ ["A moving bicycle slows because the brakes are applied.","Unbalanced"]
+];
+const predictItems=[
+ ["A bicycle has a net force forward while moving forward.","Speeds up"],
+ ["A ball moving forward is pushed sideways.","Changes direction"],
+ ["A moving car experiences a net braking force backward.","Slows down"],
+ ["A falling fruit has a net force downward.","Speeds up downward"],
+ ["A vehicle moves straight at constant velocity with zero net force.","Keeps constant velocity"],
+ ["A trolley moving right has a net force to the left.","Slows down"]
+];
+const quizItems=[
+ ["A force is best described as a…",["push or pull","kind of energy","measurement of speed"],0],
+ ["What is the SI unit of force?",["kilogram (kg)","newton (N)","meter (m)"],1],
+ ["Which instrument can measure force?",["spring scale / force meter","thermometer","stopwatch"],0],
+ ["Balanced forces acting on an object have a net force of…",["10 N","0 N","100 N"],1],
+ ["Which situation shows unbalanced forces?",["A book resting on a table","A car moving at constant velocity","A fruit speeding up as it falls"],2],
+ ["A learner stands still. The upward normal force and downward weight are…",["unequal","equal and opposite","both absent"],1],
+ ["A 12 N force acts right and a 5 N force acts left. Net force is…",["7 N right","17 N left","7 N left"],0],
+ ["A car moves straight at constant velocity. Which is true?",["There are no forces acting","The car must be at rest","The net force is zero"],2],
+ ["A sideways force on a moving ball can change its…",["mass","direction","temperature"],1],
+ ["Gravity pulls a fruit down with 8 N; air resistance pushes up with 3 N. Net force is…",["5 N downward","11 N upward","0 N"],0]
+];
+function buildRadioQuestions(target,items,prefix){
+ const el=document.getElementById(target);
+ el.innerHTML=items.map((it,i)=>`<div class="question"><p>${i+1}. ${it[0]}</p><div class="options">${(prefix==="c"?["Balanced","Unbalanced"]:["Speeds up","Changes direction","Slows down","Speeds up downward","Keeps constant velocity"]).map((op,j)=>`<label><input type="radio" name="${prefix}${i}" value="${op}"> ${op}</label>`).join("")}</div><div id="${prefix}fb${i}" class="small"></div></div>`).join("");
+}
+buildRadioQuestions("classify",classifyItems,"c");
+buildRadioQuestions("predict",predictItems,"p");
+document.getElementById("quiz").innerHTML=quizItems.map((q,i)=>`<div class="question"><p>${i+1}. ${q[0]}</p><div class="options">${q[1].map((a,j)=>`<label><input type="radio" name="q${i}" value="${j}" onchange="updateProgress()"> ${String.fromCharCode(65+j)}. ${a}</label>`).join("")}</div><div id="qfb${i}" class="small"></div></div>`).join("");
+function updateProgress(){let n=quizItems.filter((q,i)=>document.querySelector(`input[name=q${i}]:checked`)).length;document.getElementById("progressBar").style.width=(n*10)+"%";document.getElementById("progressText").textContent=`${n} of 10 answered`;}
+function checkRadio(items,prefix,scoreId){
+ let score=0;
+ items.forEach((it,i)=>{let a=document.querySelector(`input[name="${prefix}${i}"]:checked`);let ok=a&&a.value===it[1];if(ok)score++;document.getElementById(prefix+"fb"+i).textContent=ok?"Correct.":"Review the situation and the direction of the net force.";document.getElementById(prefix+"fb"+i).className="feedback "+(ok?"correct":"incorrect");});
+ document.getElementById(scoreId).textContent=`Score: ${score}/${items.length}`;
+ return score;
+}
+function checkClassify(){window.classifyScore=checkRadio(classifyItems,"c","classifyScore");}
+function checkPredict(){window.predictScore=checkRadio(predictItems,"p","predictScore");}
+function checkCalculations(){
+ const ans=[["calc1","dir1",8,"Right"],["calc2","dir2",0,"Zero / balanced"],["calc3","dir3",6,"Down"]];
+ let score=0;
+ ans.forEach((a,i)=>{let v=Number(document.getElementById(a[0]).value),d=document.getElementById(a[1]).value,ok=v===a[2]&&d===a[3];if(ok)score++;});
+ window.calculationScore=score;document.getElementById("calcScore").textContent=`Score: ${score}/3`;
+}
+function gradeQuiz(){
+ let score=0,answered=0;
+ quizItems.forEach((q,i)=>{let a=document.querySelector(`input[name=q${i}]:checked`);if(a)answered++;let ok=a&&Number(a.value)===q[2];if(ok)score++;let fb=document.getElementById("qfb"+i);fb.textContent=ok?"Correct.":`Correct answer: ${String.fromCharCode(65+q[2])}. ${q[1][q[2]]}`;fb.className="feedback "+(ok?"correct":"incorrect");});
+ window.quizScore=score;document.getElementById("quizScore").textContent=`Your score: ${score}/10`;
+ document.getElementById("quizFeedback").innerHTML=score>=8?'<div class="callout">Well done! You are ready for enrichment.</div>':score>=6?'<div class="callout">Good effort. Review the examples and try again.</div>':'<div class="callout">Keep practicing. Revisit the explanations and ask your teacher for support.</div>';
+ updateProgress();
+}
+function updateDiagram(){
+ let r=Math.max(0,Math.min(1000,Number(document.getElementById("rightForce").value)||0)),l=Math.max(0,Math.min(1000,Number(document.getElementById("leftForce").value)||0));
+ let max=Math.max(r,l,1),scale=150/max,rl=35+r*scale,ll=35+l*scale;
+ document.getElementById("rightArrow").setAttribute("x2",340+rl);document.getElementById("leftArrow").setAttribute("x2",260-ll);
+ document.getElementById("rightLabel").setAttribute("x",340+rl/2);document.getElementById("leftLabel").setAttribute("x",260-ll/2);
+ document.getElementById("rightLabel").textContent=r+" N →";document.getElementById("leftLabel").textContent="← "+l+" N";
+ let diff=Math.abs(r-l),dir=r>l?"right":l>r?"left":"";
+ document.getElementById("netResult").textContent=diff===0?"Net force = 0 N. Forces are balanced.":`Net force = ${diff} N to the ${dir}. Forces are unbalanced.`;
+ document.getElementById("motionResult").textContent=diff===0?"There is no change in motion: the object stays at rest or continues at constant velocity.":`If the object is free to move, it may accelerate to the ${dir}.`;
+}
+document.getElementById("rightForce").addEventListener("input",updateDiagram);document.getElementById("leftForce").addEventListener("input",updateDiagram);
+updateDiagram();
+function val(id){return document.getElementById(id).value.trim()}
+function getReport(){
+ return {title:"Forces in Action! — Grade 7 Science learner output",learner:{name:val("learnerName"),section:val("section"),date:val("date")},activities:{
+ classification:classifyItems.map((x,i)=>({situation:x[0],response:(document.querySelector(`input[name=c${i}]:checked`)||{}).value||""})),
+ prediction:predictItems.map((x,i)=>({situation:x[0],response:(document.querySelector(`input[name=p${i}]:checked`)||{}).value||""})),
+ netForce:[1,2,3].map(i=>({magnitude:val("calc"+i),direction:val("dir"+i)})),
+ freeBodyDiagramExplanation:val("fbdExplain"),
+ quiz:quizItems.map((x,i)=>({question:x[0],answer:(document.querySelector(`input[name=q${i}]:checked`)||{}).value===undefined?"":quizItems[i][1][Number(document.querySelector(`input[name=q${i}]:checked`).value)]})),
+ quizScore:window.quizScore??null,classificationScore:window.classifyScore??null,predictionScore:window.predictScore??null,calculationScore:window.calculationScore??null,
+ reflection:val("reflection"),submittedAt:new Date().toISOString()
+ }};
+}
+function downloadFile(name,content,type){let blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);}
+function downloadReport(){
+ if(!val("learnerName")){document.getElementById("downloadMessage").textContent="Please enter the learner's full name before downloading.";document.getElementById("learnerName").focus();return;}
+ let data=getReport(),slug=data.learner.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"learner";
+ downloadFile(`Forces-in-Action-${slug}.json`,JSON.stringify(data,null,2),"application/json");
+ document.getElementById("downloadMessage").textContent="Your JSON learning output has been prepared. Check your Downloads folder.";
+}
+function downloadText(){
+ if(!val("learnerName")){document.getElementById("downloadMessage").textContent="Please enter the learner's full name before downloading.";document.getElementById("learnerName").focus();return;}
+ let d=getReport(),lines=[d.title,`Name: ${d.learner.name}`,`Grade/Section: ${d.learner.section}`,`Date: ${d.learner.date}`,"","ACTIVITY 1 — CLASSIFICATION",...d.activities.classification.map((x,i)=>`${i+1}. ${x.situation}\n   Answer: ${x.response||"Not answered"}`),"","ACTIVITY 2 — PREDICTION",...d.activities.prediction.map((x,i)=>`${i+1}. ${x.situation}\n   Answer: ${x.response||"Not answered"}`),"","ACTIVITY 3 — NET FORCE",...d.activities.netForce.map((x,i)=>`${i+1}. ${x.magnitude||"—"} N; ${x.direction||"—"}`),"","ACTIVITY 4 — FREE-BODY DIAGRAM",d.activities.freeBodyDiagramExplanation||"Not answered","","QUIZ",`Score: ${d.quizScore===null?"Not submitted":d.quizScore+"/10"}`,...d.activities.quiz.map((x,i)=>`${i+1}. ${x.answer||"Not answered"}`),"","REFLECTION",d.activities.reflection||"Not answered"];
+ downloadFile(`Forces-in-Action-${d.learner.name.replace(/[^a-z0-9]+/gi,"-")}.txt`,lines.join("\n"),"text/plain");
+ document.getElementById("downloadMessage").textContent="Your printable text report has been prepared. Check your Downloads folder.";
+}
+document.getElementById("date").value=new Date().toISOString().slice(0,10);
+</script>
+</body></html>
